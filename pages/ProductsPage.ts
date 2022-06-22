@@ -26,6 +26,10 @@ export class ProductsPage extends BaseShopPage {
     (await this.getItemByName(itemName)).addToCart();
   }
 
+  async removeItemFromCart(itemName: string) {
+    (await this.getItemByName(itemName)).removeFromCart();
+  }
+
   async goToCart() {
     await this.cartIcon.click();
     return new CartPage(this.page);

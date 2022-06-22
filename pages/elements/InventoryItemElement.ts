@@ -18,4 +18,9 @@ export class InventoryItemELement extends BaseItemElement {
     await this.addToCartButton.click();    
     await this.removeButton.isVisible()
   }
+
+  async removeFromCart() {
+    await this.removeButton.click();    
+    await this.addToCartButton.isVisible()
+  }
 }
